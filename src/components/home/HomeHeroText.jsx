@@ -1,5 +1,5 @@
 import React from 'react'
-import Video from './video'
+import Video from './Video'
 
 const HomeHeroText = () => {
     return (
@@ -10,7 +10,7 @@ const HomeHeroText = () => {
             <div className='text-[9.5vw] justify-center flex items-start uppercase leading-[8vw]'>
                 ALL
                 <div className='h-[7vw] w-[16vw] rounded-full -mt-3 overflow-hidden'>
-                 <video />
+                    <Video />
                 </div>
                 THINGS
             </div>

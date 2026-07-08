@@ -7,13 +7,12 @@ const Home = () => {
   return (
     <div>
       <div className='h-screen w-screen fixed'>
-         <video />
+        <Video />
       </div>
-      <div className='h-screen w-screen relative flex flex-col items-center justify-between py-10'>
+      <div className='h-screen w-screen relative pb-5 overflow-hidden flex flex-col justify-between'>
         <HomeHeroText />
         <HomeBottomText />
       </div>
-
     </div>
   )
 }
