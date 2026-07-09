@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import { Children, useRef } from 'react'
+import { useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 
 const Stairs = (props) => {
@@ -34,7 +34,7 @@ const Stairs = (props) => {
             y: '0%',
         })
 
-        gsap.from(props.current, {
+        gsap.from(pageRef.current, {
             opacity: 0,
             delay: 1.3,
             scale: 1.2
