@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Video from '../components/home/Video'
 import HomeBottomText from '../components/home/HomeBottomText'
 import HomeHeroText from '../components/home/HomeHeroText'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
 
 const Home = () => {
+
+
   return (
-    <div>
+    <div className='text-white'>
       <div className='h-screen w-screen fixed'>
         <Video />
       </div>
