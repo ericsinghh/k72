@@ -41,7 +41,6 @@ const Stairs = (props) => {
         })
     }, [currentPath])
 
-
     console.log(props.children);
 
 
