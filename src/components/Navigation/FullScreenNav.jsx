@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { NavbarContext } from '../../context/NavContext'
@@ -20,7 +20,7 @@ const FullScreenNav = () => {
             display: 'block'
         })
         tl.to('.stairing', {
-            delay: 0.5,
+            delay: 0.2,
             height: '100%',
             stagger: {
                 amount: -0.3
@@ -43,24 +43,23 @@ const FullScreenNav = () => {
             opacity: 0,
             rotateX: 90,
             stagger: {
-                amount: 0.3
+                amount: 0.1
             }
         })
         tl.to('.stairing', {
-            delay: 0.5,
             height: 0,
             stagger: {
-                amount: -0.3
+                amount: -0.1
             }
         })
         tl.to('.navlink', {
             opacity: 0
         })
         tl.to('.fullscreennav', {
-            display: 'none',
-            delay: 1
+            display: 'none'
         })
     }
+
 
     useGSAP(function () {
         if (navOpen) {
@@ -77,11 +76,11 @@ const FullScreenNav = () => {
         <div ref={fullScreenRef} id='fullscreennav' className='fullscreennav hidden text-white overflow-hidden h-screen w-full z-50 absolute'>
             <div className='h-screen w-full fixed'>
                 <div className='h-full w-full flex'>
-                    <div className='stairing h-full w-1/5 bg-red-900'></div>
-                    <div className='stairing h-full w-1/5 bg-red-900'></div>
-                    <div className='stairing h-full w-1/5 bg-red-900'></div>
-                    <div className='stairing h-full w-1/5 bg-red-900'></div>
-                    <div className='stairing h-full w-1/5 bg-red-900'></div>
+                    <div className='stairing h-full w-1/5 bg-black'></div>
+                    <div className='stairing h-full w-1/5 bg-black'></div>
+                    <div className='stairing h-full w-1/5 bg-black'></div>
+                    <div className='stairing h-full w-1/5 bg-black'></div>
+                    <div className='stairing h-full w-1/5 bg-black'></div>
                 </div>
             </div>
             <div ref={fullNavLinkRef} className='relative'>
