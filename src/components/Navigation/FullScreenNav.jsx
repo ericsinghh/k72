@@ -1,19 +1,32 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
 
 const FullScreenNav = () => {
+    const stairParentRef = useRef(null)
+    useGSAP(function () {
+        const tl = gsap.timeline()
+
+        tl.from('.stair', {
+            height: 0,
+            stagger: {
+                amount: -0.2
+            }
+        })
+    })
     return (
-        <div id='fullscreennav' className='text-white overflow-x-hidden h-screen w-full absolute bg-black'>
-            <div className='h-screen fixed'>
-                <div className='h-full w-full flex '>
+        <div id='fullscreennav' className='text-white overflow-hidden h-screen w-full absolute bg-black'>
+            <div ref={stairParentRef} className='h-screen w-full fixed'>
+                <div className='h-full w-full flex'>
                     <div className='stair h-full w-1/5 bg-black'></div>
+                    <div className='stair h-full w-1/5 bg-white'></div>
                     <div className='stair h-full w-1/5 bg-black'></div>
-                    <div className='stair h-full w-1/5 bg-black'></div>
-                    <div className='stair h-full w-1/5 bg-black'></div>
+                    <div className='stair h-full w-1/5 bg-white'></div>
                     <div className='stair h-full w-1/5 bg-black'></div>
                 </div>
             </div>
             <div className='relative'>
-                <div className="flex w-full justify-between items-start">
+                <div className="flex w-full justify-between p-5 items-start">
                     <div className=''>
                         <div className='w-36'>
                             <svg className='w-full' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 103 44">
@@ -27,7 +40,7 @@ const FullScreenNav = () => {
 
                     </div>
                 </div>
-                <div className='py-36 '>
+                <div className='py-36'>
                     <div className='link relative  border-t-1 border-white'>
                         <h1 className='font-[font2] text-[8vw] text-center leading-[0.8] pt-10 uppercase'>Projects</h1>
                         <div className='moveLink absolute text-black flex top-0 bg-[#D3FD50]'>
@@ -101,5 +114,6 @@ const FullScreenNav = () => {
         </div>
     )
 }
+
 
 export default FullScreenNav 
