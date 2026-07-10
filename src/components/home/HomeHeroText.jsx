@@ -17,7 +17,7 @@ const HomeHeroText = () => {
             <div className='text-[9.5vw] justify-center flex items-center uppercase leading-[8vw]'>
                 CREATIVE
             </div>
-        </div >
+        </div>
     )
 }
 
