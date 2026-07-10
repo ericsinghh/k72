@@ -3,29 +3,40 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 const FullScreenNav = () => {
-    const stairParentRef = useRef(null)
+    const fullNavLinkRef = useRef(null)
+
     useGSAP(function () {
         const tl = gsap.timeline()
-
-        tl.from('.stair', {
+        tl.from('.stairing', {
+            delay: 1,
             height: 0,
             stagger: {
                 amount: -0.2
             }
         })
+        tl.from(fullNavLinkRef.current, {
+            opacity: 0
+        })
+        tl.from('.link', {
+            opacity: 0,
+            rotatex: 90,
+            stagger: {
+                amount: 0.2
+            }
+        })
     })
     return (
-        <div id='fullscreennav' className='text-white overflow-hidden h-screen w-full absolute bg-black'>
-            <div ref={stairParentRef} className='h-screen w-full fixed'>
+        <div id='fullscreennav' className='text-white overflow-hidden h-screen w-full absolute'>
+            <div className='h-screen w-full fixed'>
                 <div className='h-full w-full flex'>
-                    <div className='stair h-full w-1/5 bg-black'></div>
-                    <div className='stair h-full w-1/5 bg-white'></div>
-                    <div className='stair h-full w-1/5 bg-black'></div>
-                    <div className='stair h-full w-1/5 bg-white'></div>
-                    <div className='stair h-full w-1/5 bg-black'></div>
+                    <div className='stairing h-full w-1/5 bg-red-900'></div>
+                    <div className='stairing h-full w-1/5 bg-red-900'></div>
+                    <div className='stairing h-full w-1/5 bg-red-900'></div>
+                    <div className='stairing h-full w-1/5 bg-red-900'></div>
+                    <div className='stairing h-full w-1/5 bg-red-900'></div>
                 </div>
             </div>
-            <div className='relative'>
+            <div ref={fullNavLinkRef} className='relative'>
                 <div className="flex w-full justify-between p-5 items-start">
                     <div className=''>
                         <div className='w-36'>
@@ -41,7 +52,7 @@ const FullScreenNav = () => {
                     </div>
                 </div>
                 <div className='py-36'>
-                    <div className='link relative  border-t-1 border-white'>
+                    <div className='link origin-top relative  border-t-1 border-white'>
                         <h1 className='font-[font2] text-[8vw] text-center leading-[0.8] pt-10 uppercase'>Projects</h1>
                         <div className='moveLink absolute text-black flex top-0 bg-[#D3FD50]'>
                             <div className='moveX flex items-center'>
@@ -58,7 +69,7 @@ const FullScreenNav = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='link relative  border-t-1 border-white'>
+                    <div className='link origin-top relative  border-t-1 border-white'>
                         <h1 className='font-[font2] text-[8vw] text-center leading-[0.8] pt-10 uppercase'>Projects</h1>
                         <div className='moveLink absolute text-black flex top-0 bg-[#D3FD50]'>
                             <div className='moveX flex items-center'>
@@ -75,7 +86,7 @@ const FullScreenNav = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='link relative  border-t-1 border-white'>
+                    <div className='link origin-top relative  border-t-1 border-white'>
                         <h1 className='font-[font2] text-[8vw] text-center leading-[0.8] pt-10 uppercase'>Projects</h1>
                         <div className='moveLink absolute text-black flex top-0 bg-[#D3FD50]'>
                             <div className='moveX flex items-center'>
@@ -92,7 +103,7 @@ const FullScreenNav = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='link relative  border-t-1 border-white'>
+                    <div className='link origin-top relative  border-t-1 border-white'>
                         <h1 className='font-[font2] text-[8vw] text-center leading-[0.8] pt-10 uppercase'>Projects</h1>
                         <div className='moveLink absolute text-black flex top-0 bg-[#D3FD50]'>
                             <div className='moveX flex items-center'>
@@ -114,6 +125,5 @@ const FullScreenNav = () => {
         </div>
     )
 }
-
 
 export default FullScreenNav 
