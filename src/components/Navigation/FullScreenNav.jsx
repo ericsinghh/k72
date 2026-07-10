@@ -5,6 +5,8 @@ import { useGSAP } from '@gsap/react'
 const FullScreenNav = () => {
     const fullNavLinkRef = useRef(null)
 
+    const [navOpen, satNavOpen]useContext(NavContext)
+
     useGSAP(function () {
         const tl = gsap.timeline()
         tl.from('.stairing', {
@@ -26,7 +28,7 @@ const FullScreenNav = () => {
         })
     })
     return (
-        <div id='fullscreennav' className='text-white overflow-hidden h-screen w-full absolute'>
+        <div id='fullscreennav' className='hidden text-white overflow-hidden h-screen w-full absolute'>
             <div className='h-screen w-full fixed'>
                 <div className='h-full w-full flex'>
                     <div className='stairing h-full w-1/5 bg-red-900'></div>
