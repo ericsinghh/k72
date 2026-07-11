@@ -5,6 +5,7 @@ const Navbar = () => {
 
     const navGreenRef = useRef(null)
     const [navOpen, setNavOpen] = useContext(NavbarContext)
+    const [navColor, setNavColor] = useContext(NavbarcolorContext)
 
     return (
         <div className='z-4 flex fixed top-0 w-full items-start justify-between'>
