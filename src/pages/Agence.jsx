@@ -54,16 +54,16 @@ const Agence = () => {
   return (
     <div className='parent'>
       <div id='page1' className='py-1'>
-        <div ref={imageDivRef} className='absolute overflow-hidden h-[40vw] md:h-[20vw] rounded-3xl w-[30vw] md:w-[15vw] top-24 md:top-42 left-[35vw] md:left-[30vw]'>
+        <div ref={imageDivRef} className='absolute overflow-hidden h-[20vw] rounded-3xl w-[15vw] lg:top-96 left-[30vw]'>
           <img ref={imageRef} className='h-full object-cover w-full' src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7" alt="" />
         </div>
         <div className='relative font-[font2]'>
-          <div className='mt-[35vh] md:mt-[55vh]'>
-            <h1 className='text-[14vw] md:text-[20vw] text-center uppercase leading-[12vw] md:leading-[18vw]'>SEVEN7Y <br />
+          <div className='lg:mt-[55vh] mt-[30vh]'>
+            <h1 className='text-[20vw] text-center uppercase leading-[18vw]'>SEVEN7Y <br />
               TWO</h1>
           </div>
-          <div className='pl-0 md:pl-[42%] px-4 md:px-0 mt-4 md:mt-0.2'>
-            <p className='text-2xl md:text-6xl'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We’re inquisitive and open-minded, and we make sure creativity crowds out ego from every corner. A brand is a living thing, with values, a personality and a story. If we ignore that, we can achieve short-term success, but not influence that goes the distance. We bring that perspective to every brand story we help tell.</p>
+          <div className='pl-[40%] mt-20'>
+            <p className='text-6xl'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We’re inquisitive and open-minded, and we make sure creativity crowds out ego from every corner. A brand is a living thing, with values, a personality and a story. If we ignore that, we can achieve short-term success, but not influence that goes the distance. We bring that perspective to every brand story we help tell.</p>
           </div>
         </div>
       </div>
