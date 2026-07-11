@@ -18,16 +18,16 @@ const Projects = () => {
 
   useGSAP(function () {
     gsap.from('.hero', {
-      height: 0,
+      height: '100px',
       stagger: {
-
-      }
-     ScrollTrigger: {
+        amount: 0.4
+      },
+      ScrollTrigger: {
         trigger: '.lol',
-        markers: ture,
+        markers: true,
         start: 'top 100%',
-        end: 'top 150%',
-        scrub: ture
+        end: 'top -150%',
+        scrub: true
       }
     })
   })
