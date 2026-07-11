@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react'
-import { NavbarContext } from '../../context/NavContext'
+import { NavbarContext, NavbarcolorContext } from '../../context/NavContext'
 
 const Navbar = () => {
 
@@ -26,7 +26,7 @@ const Navbar = () => {
                 }}
                 className='lg:h-16 h-10 bg-black relative lg:w-[16vw] w-48 '>
                 <div ref={navGreenRef} className='bg-[#D3FD50] transition-all absolute top-0 h-0 w-full'></div>
-                <div className='relative h-full lg:px-12 px-4 flex flex-col justify-center items-end lg:gap-1.5 gsap-0.5'>
+                <div className='relative h-full lg:px-12 px-4 flex flex-col justify-center items-end lg:gap-1.5 gap-0.5'>
                     <div className="lg:w-18 w-12 h-0.5 bg-white"></div>
                     <div className="lg:w-10 w-6  h-0.5 bg-white"></div>
                 </div>
